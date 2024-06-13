@@ -1,0 +1,15 @@
+@media screen and (max-width: 1200px) {
+  .hide-on-mobile {
+    background: red;
+    display: none !important;
+  }
+  #input-container {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    width: 100%;
+    .input-box {
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+}

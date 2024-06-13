@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white;
+    font-family: vazir, Roboto, Arial;
+  }
+
+  h1 {
+    @apply mb-5 text-5xl;
+  }
+
+  h2 {
+    @apply mb-4 text-4xl;
+  }
+
+  h3 {
+    @apply mb-3 text-3xl;
+  }
+
+  h4 {
+    @apply mb-2 text-2xl;
+  }
+
+  h5 {
+    @apply text-xl;
+  }
+
+  h6 {
+    @apply text-base;
+  }
+}
+
+/* customize toastify styles */
+@media screen and (max-width: 600px) {
+  .auth-toast-container {
+    right: 50%;
+    width: 100%;
+    transform: translateX(50%);
+  }
+}
+
+.auth-toast-container .Toastify__toast-body {
+  font-family: "vazir", "Roboto", "Arial" !important;
+  direction: rtl;
+}
