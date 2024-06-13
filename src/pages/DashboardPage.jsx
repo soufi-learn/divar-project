@@ -4,7 +4,7 @@ import PostList from "../components/templates/PostList";
 
 const DashboardPage = () => {
   return (
-    <Grid container flexDirection="column" gap={4} mt={10} mx={10}>
+    <Grid container flexDirection="column" gap={4} mt={10} px={10}>
       <AddPost />
       <PostList />
     </Grid>

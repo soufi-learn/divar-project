@@ -1,16 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   Box,
   Button,
-  FormControl,
   Grid,
-  InputLabel,
   MenuItem,
   Select,
   TextField,
   Typography,
 } from "@mui/material";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { getCategory } from "../../services/admin";
 import { getCookie } from "../utils/cookie";
 import axios from "axios";
@@ -81,7 +79,6 @@ const AddPost = () => {
         },
       })
       .then((response) => {
-        console.log(response);
         toast.success("آگهی با موفقیت ایجاد شد");
       })
       .catch((error) => {
@@ -142,14 +139,6 @@ const AddPost = () => {
         </Box>
 
         <Box>
-          {/* <select name="category">
-            {data?.data.map((item) => (
-              <option key={item._id} value={item._id}>
-                {item.name}
-                {isLoading && "در حال بارگذاری..."}
-              </option>
-            ))}
-          </select> */}
           <StyledSelect
             value={form.category}
             onChange={changeHandler}
